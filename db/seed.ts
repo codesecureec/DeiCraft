@@ -1,7 +1,7 @@
 import { db, users } from 'astro:db';
 
 // https://astro.build/db/seed
-export default async function seed() {
+export default async function () {
 	await db.insert(users).values([
 		{ 
 			id: "1", 
