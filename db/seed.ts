@@ -4,16 +4,16 @@ import { db, users } from 'astro:db';
 export default async function seed() {
 	await db.insert(users).values([
 		{ 
-			id: '1', 
-			name: 'deics', 
-			email: 'ajimenez@copmuterserviceec.com',
-			password: 'password',
+			id: "1", 
+			name: "deics", 
+			email: "ajimenez@copmuterserviceec.com",
+			password: "password",
 		},
 		{ 
-			id: '2', 
-			name: 'maics', 
-			email: 'msegura@copmuterserviceec.com',
-			password: 'password1',
+			id: "2", 
+			name: "maics", 
+			email: "msegura@copmuterserviceec.com",
+			password: "password1",
 		},
 	]);
 }
