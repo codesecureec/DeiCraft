@@ -1,5 +1,6 @@
 ---
-
+import {db, users} from "astro:db";
+const user = await db.select().from(users);
 ---
 
 <html lang="en">
@@ -11,6 +12,13 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>Usuarios: </h1>
+		<ul>
+			{
+				user.map((user) => (
+					<li>{user.name}</li>
+				))
+			}
+		</ul>
 	</body>
 </html>
